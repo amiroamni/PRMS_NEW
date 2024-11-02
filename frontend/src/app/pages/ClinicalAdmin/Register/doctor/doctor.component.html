@@ -1,0 +1,112 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+  <div class="card shadow-lg p-4" style="max-width: 600px; width: 100%;">
+    <h2 class="text-center font-weight-bold mb-4">Doctor Registration</h2>
+    <form [formGroup]="StuffForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Hospital Name -->
+      <div class="form-group mb-3">
+        <label for="doctorFirstName" class="font-weight-medium">First Name</label>
+        <input id="doctorFirstName" formControlName="doctorFirstName" type="text" 
+          class="form-control" 
+          [class.is-invalid]="StuffForm.get('doctorFirstName')?.invalid && StuffForm.get('doctorFirstName')?.touched"
+          placeholder="Enter First Name">
+        <div *ngIf="StuffForm.get('doctorFirstName')?.invalid && StuffForm.get('doctorFirstName')?.touched" class="text-danger small mt-1">
+          First Name is required
+        </div>
+      </div>
+
+      <!-- Middle Name -->
+      <div class="form-group mb-3">
+        <label for="doctorMiddleName" class="font-weight-medium">Middle Name</label>
+        <input id="doctorMiddleName" formControlName="doctorMiddleName" type="text"
+          class="form-control"
+          [class.is-invalid]="StuffForm.get('doctorMiddleName')?.invalid && StuffForm.get('doctorMiddleName')?.touched"
+          placeholder="Enter Middle Name">
+        <div *ngIf="StuffForm.get('doctorMiddleName')?.invalid && StuffForm.get('doctorMiddleName')?.touched" class="text-danger small mt-1">
+          Middle Name is required
+        </div>
+      </div>
+
+      <!-- Last Name -->
+      <div class="form-group mb-3">
+        <label for="doctorLastName" class="font-weight-medium">Last Name</label>
+        <input id="doctorLastName" formControlName="doctorLastName" type="text" 
+          class="form-control"
+          [class.is-invalid]="StuffForm.get('doctorLastName')?.invalid && StuffForm.get('doctorLastName')?.touched"
+          placeholder="Enter Last Name">
+        <div *ngIf="StuffForm.get('doctorLastName')?.invalid && StuffForm.get('doctorLastName')?.touched" class="text-danger small mt-1">
+         Last Name is required
+        </div>
+      </div>
+
+      <!-- Gender -->
+      <div class="form-group mb-3">
+        <label for="gender" class="font-weight-medium">Gender</label>
+        <input id="gender" formControlName="gender" type="text" 
+          class="form-control"
+          [class.is-invalid]="StuffForm.get('gender')?.invalid && StuffForm.get('gender')?.touched"
+          placeholder="Enter Gender">
+        <div *ngIf="StuffForm.get('gender')?.invalid && StuffForm.get('gender')?.touched" class="text-danger small mt-1">
+           Gender is required
+        </div>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="form-group mb-3">
+        <label for="doctorphone" class="font-weight-medium">Phone</label>
+        <input id="doctorphone" formControlName="doctorphone" type="tel" 
+          class="form-control"
+          [class.is-invalid]="StuffForm.get('doctorphone')?.invalid && StuffForm.get('doctorphone')?.touched"
+          placeholder="Enter Phone Number">
+        <div *ngIf="StuffForm.get('doctorphone')?.invalid && StuffForm.get('doctorphone')?.touched" class="text-danger small mt-1">
+         Phone is required
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group mb-3">
+        <label for="doctorEmail" class="font-weight-medium">Email</label>
+        <input id="doctorEmail" formControlName="doctorEmail" type="email" 
+          class="form-control"
+          [class.is-invalid]="StuffForm.get('doctorEmail')?.invalid && StuffForm.get('doctorEmail')?.touched"
+          placeholder="Enter email">
+        <div *ngIf="StuffForm.get('doctorEmail')?.invalid && StuffForm.get('doctorEmail')?.touched" class="text-danger small mt-1">
+          Email is required
+        </div>
+      </div>
+
+      <!-- Specialization Dropdown -->
+      <div class="form-group mb-3">
+        <label for="specializationID" class="font-weight-medium">Specialization</label>
+        <select id="specializationID" formControlName="specializationID" class="form-control"
+          [class.is-invalid]="StuffForm.get('specializationID')?.invalid && StuffForm.get('specializationID')?.touched">
+          <option value="" disabled selected>Select Specialization</option>
+          <option *ngFor="let specialization of specializations" [value]="specialization.specializationId">
+            {{ specialization.specializationName }}
+          </option>
+        </select>
+        <div *ngIf="StuffForm.get('specializationID')?.invalid && StuffForm.get('specializationID')?.touched" class="text-danger small mt-1">
+          Specialization is required
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="StuffForm.invalid" class="btn btn-primary btn-block font-weight-semibold">
+        Register Doctor
+      </button>
+    </form>
+  </div>
+</div>
+
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+  }
+  .is-invalid {
+    border-color: red !important;
+  }
+  .is-invalid:focus {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  }
+</style>

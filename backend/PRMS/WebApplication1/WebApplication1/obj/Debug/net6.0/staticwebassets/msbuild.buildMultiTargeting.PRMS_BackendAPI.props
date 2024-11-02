@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PRMS_BackendAPI.props" />
+</Project>

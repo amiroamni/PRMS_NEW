@@ -1,0 +1,111 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+    <div class="card shadow-lg p-4" style="max-width: 600px; width: 100%;">
+      <h2 class="text-center font-weight-bold mb-4">Clinic Registration</h2>
+      <form [formGroup]="clincalForm" (ngSubmit)="onSubmit()">
+        
+        <!-- Hospital Name -->
+        <div class="form-group mb-3">
+          <label for="clinicName" class="font-weight-medium">Clinic Name</label>
+          <input id="clinicName" formControlName="clinicName" type="text" 
+            class="form-control" 
+            [class.is-invalid]="clincalForm.get('clinicName')?.invalid && clincalForm.get('clinicName')?.touched"
+            placeholder="Enter Clinic Name">
+          <div *ngIf="clincalForm.get('clinicName')?.invalid && clincalForm.get('clinicName')?.touched" class="text-danger small mt-1">
+            CLinic name is required
+          </div>
+        </div>
+    
+        <!-- Type -->
+        <div class="form-group mb-3">
+          <label for="clinicType" class="font-weight-medium">Type</label>
+          <input id="clinicType" formControlName="clinicType" type="text"
+            class="form-control"
+            [class.is-invalid]="clincalForm.get('clinicType')?.invalid && clincalForm.get('clinicType')?.touched"
+            placeholder="Enter clinicType">
+          <div *ngIf="clincalForm.get('clinicType')?.invalid && clincalForm.get('clinicType')?.touched" class="text-danger small mt-1">
+            Type is required
+          </div>
+        </div>
+
+        
+        <!-- clinicPhone Number -->
+        <div class="form-group mb-3">
+          <label for="clinicPhone" class="font-weight-medium">Phone Number</label>
+          <input id="clinicPhone" formControlName="clinicPhone" type="tel" 
+            class="form-control"
+            [class.is-invalid]="clincalForm.get('clinicPhone')?.invalid && clincalForm.get('clinicPhone')?.touched"
+            placeholder="Enter Phone number">
+          <div *ngIf="clincalForm.get('clinicPhone')?.invalid && clincalForm.get('clinicPhone')?.touched" class="text-danger small mt-1">
+            Phone number is required
+          </div>
+        </div>
+
+  
+  
+        <!-- clinicEmail -->
+        <div class="form-group mb-3">
+          <label for="clinicEmail" class="font-weight-medium">clinicEmail</label>
+          <input id="clinicEmail" formControlName="clinicEmail" type="email" 
+            class="form-control"
+            [class.is-invalid]="clincalForm.get('clinicEmail')?.invalid && clincalForm.get('clinicEmail')?.touched"
+            placeholder="Enter Email">
+          <div *ngIf="clincalForm.get('clinicEmail')?.invalid && clincalForm.get('clinicEmail')?.touched" class="text-danger small mt-1">
+            Email is required
+          </div>
+        </div>
+
+          <!-- Location -->
+          <div class="form-group mb-3">
+            <label for="clinicLocation" class="font-weight-medium">Location</label>
+            <input id="clinicLocation" formControlName="clinicLocation" type="text"
+              class="form-control"
+              [class.is-invalid]="clincalForm.get('clinicLocation')?.invalid && clincalForm.get('clinicLocation')?.touched"
+              placeholder="Enter location">
+            <div *ngIf="clincalForm.get('clinicLocation')?.invalid && clincalForm.get('clinicLocation')?.touched" class="text-danger small mt-1">
+              Location is required
+            </div>
+          </div>
+  
+        <!-- Work Permit Upload -->
+        <!-- <div class="form-group mb-3">
+          <label for="workPermit" class="font-weight-medium">Work Permit</label>
+          <input id="workPermit" type="file" (change)="onFileSelect($event, 'workPermit')" 
+            class="form-control"
+            [class.is-invalid]="clincalForm.get('workPermit')?.invalid && clincalForm.get('workPermit')?.touched">
+          <div *ngIf="clincalForm.get('workPermit')?.invalid && clincalForm.get('workPermit')?.touched" class="text-danger small mt-1">
+            Work Permit is required
+          </div>
+        </div> -->
+  
+        <!-- License Upload -->
+        <!-- <div class="form-group mb-3">
+          <label for="licence" class="font-weight-medium">License</label>
+          <input id="licence" type="file" (change)="onFileSelect($event, 'licence')" 
+            class="form-control"
+            [class.is-invalid]="clincalForm.get('licence')?.invalid && clincalForm.get('licence')?.touched">
+          <div *ngIf="clincalForm.get('licence')?.invalid && clincalForm.get('licence')?.touched" class="text-danger small mt-1">
+            License is required
+          </div>
+        </div> -->
+  
+        <!-- Submit Button -->
+        <button type="submit" [disabled]="clincalForm.invalid" class="btn btn-primary btn-block font-weight-semibold">
+          Register Hospital
+        </button>
+      </form>
+    </div>
+  </div>
+  
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+    }
+    .is-invalid {
+      border-color: red !important;
+    }
+    .is-invalid:focus {
+      box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    }
+  </style>
+  

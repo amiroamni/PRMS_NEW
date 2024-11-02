@@ -1,0 +1,108 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+  <div class="card shadow-lg p-4" style="max-width: 600px; width: 100%;">
+    <h2 class="text-center font-weight-bold mb-4">Hospital Registration</h2>
+    <form [formGroup]="hospitalForm" (ngSubmit)="onSubmit()">
+      
+      <!-- Hospital Name -->
+      <div class="form-group mb-3">
+        <label for="name" class="font-weight-medium">Hospital Name</label>
+        <input id="hospitalName" formControlName="hospitalName" type="text" 
+          class="form-control" 
+          [class.is-invalid]="hospitalForm.get('hospitalName')?.invalid && hospitalForm.get('hospitalName')?.touched"
+          placeholder="Enter hospital name">
+        <div *ngIf="hospitalForm.get('hospitalName')?.invalid && hospitalForm.get('hospitalName')?.touched" class="text-danger small mt-1">
+          Hospital name is required
+        </div>
+      </div>
+
+      <!-- Hospital Type -->
+      <div class="form-group mb-3">
+        <label for="hospitalType" class="font-weight-medium">Hospital Type</label>
+        <input id="hospitalType" formControlName="hospitalType" type="text"
+          class="form-control"
+          [class.is-invalid]="hospitalForm.get('hospitalType')?.invalid && hospitalForm.get('location')?.touched"
+          placeholder="Enter hospitalType">
+        <div *ngIf="hospitalForm.get('hospitalType')?.invalid && hospitalForm.get('hospitalType')?.touched" class="text-danger small mt-1">
+          Hospital Type is required
+        </div>
+      </div>
+
+       <!-- Phone Number -->
+       <div class="form-group mb-3">
+        <label for="hospitalPhone" class="font-weight-medium">Phone Number</label>
+        <input id="hospitalPhone" formControlName="hospitalPhone" type="tel" 
+          class="form-control"
+          [class.is-invalid]="hospitalForm.get('hospitalPhone')?.invalid && hospitalForm.get('hospitalPhone')?.touched"
+          placeholder="Enter phone number">
+        <div *ngIf="hospitalForm.get('hospitalPhone')?.invalid && hospitalForm.get('hospitalPhone')?.touched" class="text-danger small mt-1">
+          Phone number is required
+        </div>
+      </div>
+
+        
+      <!-- Email -->
+      <div class="form-group mb-3">
+        <label for="hospitalEmail" class="font-weight-medium">Email</label>
+        <input id="hospitalEmail" formControlName="hospitalEmail" type="text" 
+          class="form-control"
+          [class.is-invalid]="hospitalForm.get('hospitalEmail')?.invalid && hospitalForm.get('hospitalEmail')?.touched"
+          placeholder="Enter email">
+        <div *ngIf="hospitalForm.get('hospitalEmail')?.invalid && hospitalForm.get('hospitalEmail')?.touched" class="text-danger small mt-1">
+          Email is required
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="form-group mb-3">
+        <label for="hospitalLocation" class="font-weight-medium">Location</label>
+        <input id="hospitalLocation" formControlName="hospitalLocation" type="text"
+          class="form-control"
+          [class.is-invalid]="hospitalForm.get('hospitalLocation')?.invalid && hospitalForm.get('hospitalLocation')?.touched"
+          placeholder="Enter location">
+        <div *ngIf="hospitalForm.get('hospitalLocation')?.invalid && hospitalForm.get('hospitalLocation')?.touched" class="text-danger small mt-1">
+          Location is required
+        </div>
+      </div>
+
+      <!-- Work Permit Upload -->
+      <!-- <div class="form-group mb-3">
+        <label for="workPermit" class="font-weight-medium">Work Permit</label>
+        <input id="workPermit" type="file" (change)="onFileSelect($event, 'workPermit')" 
+          class="form-control"
+          [class.is-invalid]="hospitalForm.get('workPermit')?.invalid && hospitalForm.get('workPermit')?.touched">
+        <div *ngIf="hospitalForm.get('workPermit')?.invalid && hospitalForm.get('workPermit')?.touched" class="text-danger small mt-1">
+          Work Permit is required
+        </div>
+      </div> -->
+
+      <!-- License Upload -->
+      <!-- <div class="form-group mb-3">
+        <label for="licence" class="font-weight-medium">License</label>
+        <input id="licence" type="file" (change)="onFileSelect($event, 'licence')" 
+          class="form-control"
+          [class.is-invalid]="hospitalForm.get('licence')?.invalid && hospitalForm.get('licence')?.touched">
+        <div *ngIf="hospitalForm.get('licence')?.invalid && hospitalForm.get('licence')?.touched" class="text-danger small mt-1">
+          License is required
+        </div>
+      </div> -->
+
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="hospitalForm.invalid" class="btn btn-primary btn-block font-weight-semibold">
+        Register Hospital
+      </button>
+    </form>
+  </div>
+</div>
+
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+  }
+  .is-invalid {
+    border-color: red !important;
+  }
+  .is-invalid:focus {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+  }
+</style>

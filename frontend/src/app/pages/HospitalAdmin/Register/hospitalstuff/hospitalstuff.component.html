@@ -1,0 +1,133 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+    <div class="card shadow-lg p-4" style="max-width: 600px; width: 100%;">
+      <h2 class="text-center font-weight-bold mb-4">Stuff User Registration</h2>
+      <form [formGroup]="StuffForm" (ngSubmit)="onSubmit()">
+        
+        <!-- Hospital Name -->
+        <div class="form-group mb-3">
+          <label for="firstname" class="font-weight-medium">First Name</label>
+          <input id="firstname" formControlName="firstname" type="text" 
+            class="form-control" 
+            [class.is-invalid]="StuffForm.get('firstname')?.invalid && StuffForm.get('firstname')?.touched"
+            placeholder="Enter First Name">
+          <div *ngIf="StuffForm.get('firstname')?.invalid && StuffForm.get('firstname')?.touched" class="text-danger small mt-1">
+            First Name is required
+          </div>
+        </div>
+  
+        <!-- Hospital Type -->
+        <div class="form-group mb-3">
+          <label for="middlename" class="font-weight-medium">Middle Name</label>
+          <input id="middlename" formControlName="middlename" type="text"
+            class="form-control"
+            [class.is-invalid]="StuffForm.get('middlename')?.invalid && StuffForm.get('middlename')?.touched"
+            placeholder="Enter hospitalType">
+          <div *ngIf="StuffForm.get('middlename')?.invalid && StuffForm.get('middlename')?.touched" class="text-danger small mt-1">
+            Middle Name is required
+          </div>
+        </div>
+  
+         <!-- Phone Number -->
+         <div class="form-group mb-3">
+          <label for="lastname" class="font-weight-medium">Last Name</label>
+          <input id="lastname" formControlName="lastname" type="tel" 
+            class="form-control"
+            [class.is-invalid]="StuffForm.get('lastname')?.invalid && StuffForm.get('lastname')?.touched"
+            placeholder="Enter Middle Name">
+          <div *ngIf="StuffForm.get('lastname')?.invalid && StuffForm.get('lastname')?.touched" class="text-danger small mt-1">
+           Last Name is required
+          </div>
+        </div>
+
+          <!-- Phone Number -->
+          <div class="form-group mb-3">
+            <label for="gender" class="font-weight-medium">Gender</label>
+            <input id="gender" formControlName="gender" type="tel" 
+              class="form-control"
+              [class.is-invalid]="StuffForm.get('gender')?.invalid && StuffForm.get('gender')?.touched"
+              placeholder="Enter Last Name">
+            <div *ngIf="StuffForm.get('gender')?.invalid && StuffForm.get('gender')?.touched" class="text-danger small mt-1">
+             Gender is required
+            </div>
+          </div>
+
+             <!-- Phone Number -->
+             <div class="form-group mb-3">
+                <label for="hospitalStaffPhone" class="font-weight-medium">Phone</label>
+                <input id="hospitalStaffPhone" formControlName="hospitalStaffPhone" type="tel" 
+                  class="form-control"
+                  [class.is-invalid]="StuffForm.get('hospitalStaffPhone')?.invalid && StuffForm.get('hospitalStaffPhone')?.touched"
+                  placeholder="Enter Phone Number">
+                <div *ngIf="StuffForm.get('hospitalStaffPhone')?.invalid && StuffForm.get('hospitalStaffPhone')?.touched" class="text-danger small mt-1">
+                 Phone is required
+                </div>
+              </div>
+  
+          
+        <!-- Email -->
+        <div class="form-group mb-3">
+          <label for="emailAddress" class="font-weight-medium">Email</label>
+          <input id="emailAddress" formControlName="emailAddress" type="text" 
+            class="form-control"
+            [class.is-invalid]="StuffForm.get('emailAddress')?.invalid && StuffForm.get('emailAddress')?.touched"
+            placeholder="Enter email">
+          <div *ngIf="StuffForm.get('emailAddress')?.invalid && StuffForm.get('emailAddress')?.touched" class="text-danger small mt-1">
+            Email is required
+          </div>
+        </div>
+  
+        <!-- Location -->
+        <div class="form-group mb-3">
+          <label for="role" class="font-weight-medium">Role</label>
+          <input id="role" formControlName="role" type="text"
+            class="form-control"
+            [class.is-invalid]="StuffForm.get('role')?.invalid && StuffForm.get('role')?.touched"
+            placeholder="Enter location">
+          <div *ngIf="StuffForm.get('role')?.invalid && StuffForm.get('role')?.touched" class="text-danger small mt-1">
+            Location is required
+          </div>
+        </div>
+  
+        <!-- Work Permit Upload -->
+        <!-- <div class="form-group mb-3">
+          <label for="workPermit" class="font-weight-medium">Work Permit</label>
+          <input id="workPermit" type="file" (change)="onFileSelect($event, 'workPermit')" 
+            class="form-control"
+            [class.is-invalid]="StuffForm.get('workPermit')?.invalid && StuffForm.get('workPermit')?.touched">
+          <div *ngIf="StuffForm.get('workPermit')?.invalid && StuffForm.get('workPermit')?.touched" class="text-danger small mt-1">
+            Work Permit is required
+          </div>
+        </div> -->
+  
+        <!-- License Upload -->
+        <!-- <div class="form-group mb-3">
+          <label for="licence" class="font-weight-medium">License</label>
+          <input id="licence" type="file" (change)="onFileSelect($event, 'licence')" 
+            class="form-control"
+            [class.is-invalid]="StuffForm.get('licence')?.invalid && StuffForm.get('licence')?.touched">
+          <div *ngIf="StuffForm.get('licence')?.invalid && StuffForm.get('licence')?.touched" class="text-danger small mt-1">
+            License is required
+          </div>
+        </div> -->
+  
+        <!-- Submit Button -->
+        <button type="submit" [disabled]="StuffForm.invalid" class="btn btn-primary btn-block font-weight-semibold">
+          Register Hospital
+        </button>
+      </form>
+    </div>
+  </div>
+  
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+    }
+    .is-invalid {
+      border-color: red !important;
+    }
+    .is-invalid:focus {
+      box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    }
+  </style>
+  

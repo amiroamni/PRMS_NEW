@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "VrPn/1h6ht7CcXO6uLfJ0R1GGdUWHx6p3YkPlRcTyPs=",
+  "Source": "PRMS_BackendAPI",
+  "BasePath": "_content/PRMS_BackendAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
