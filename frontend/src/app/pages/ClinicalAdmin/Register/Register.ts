@@ -1,9 +1,18 @@
-export interface Stuff{
+export interface HospitalStuff{
     firstname:string
     middlename:string
     lastname:string
     gender:string
     hospitalStaffPhone:string
+    emailAddress:string
+    role:string
+}
+export interface ClinicStuff{
+    firstname:string
+    middlename:string
+    lastname:string
+    gender:string
+    clinicPhone:string
     emailAddress:string
     role:string
 }

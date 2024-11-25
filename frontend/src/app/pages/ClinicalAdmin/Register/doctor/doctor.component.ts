@@ -82,10 +82,10 @@ export class ClinicDoctorComponent implements OnInit{
           // console.log('Hospital data saved:',response);
           const { email, password } = response;
 
-          this.router.navigate(['/Credential']);
+          this.router.navigate(['/Clinic-Doctor-Credential']);
         },
         (error)=>{
-          console.log('Error saving Hospital Data', error);
+          console.log('Error saving CLinic Doctor Data', error);
         }
       );
       // You can add your form submission logic here

@@ -21,7 +21,7 @@
           <input id="middlename" formControlName="middlename" type="text"
             class="form-control"
             [class.is-invalid]="StuffForm.get('middlename')?.invalid && StuffForm.get('middlename')?.touched"
-            placeholder="Enter hospitalType">
+            placeholder="Enter Middle Name">
           <div *ngIf="StuffForm.get('middlename')?.invalid && StuffForm.get('middlename')?.touched" class="text-danger small mt-1">
             Middle Name is required
           </div>
@@ -53,12 +53,12 @@
 
              <!-- Phone Number -->
              <div class="form-group mb-3">
-                <label for="hospitalStaffPhone" class="font-weight-medium">Phone</label>
-                <input id="hospitalStaffPhone" formControlName="hospitalStaffPhone" type="tel" 
+                <label for="clinicPhone" class="font-weight-medium">Phone</label>
+                <input id="clinicPhone" formControlName="clinicPhone" type="tel" 
                   class="form-control"
-                  [class.is-invalid]="StuffForm.get('hospitalStaffPhone')?.invalid && StuffForm.get('hospitalStaffPhone')?.touched"
+                  [class.is-invalid]="StuffForm.get('clinicPhone')?.invalid && StuffForm.get('clinicPhone')?.touched"
                   placeholder="Enter Phone Number">
-                <div *ngIf="StuffForm.get('hospitalStaffPhone')?.invalid && StuffForm.get('hospitalStaffPhone')?.touched" class="text-danger small mt-1">
+                <div *ngIf="StuffForm.get('clinicPhone')?.invalid && StuffForm.get('clinicPhone')?.touched" class="text-danger small mt-1">
                  Phone is required
                 </div>
               </div>

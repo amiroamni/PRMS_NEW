@@ -73,7 +73,7 @@ export class HospitalDoctorComponent implements OnInit{
           // console.log('Hospital data saved:',response);
           const { email, password } = response;
 
-          this.router.navigate(['/Credential']);
+          this.router.navigate(['/Hospitals-Doctor-Credential']);
         },
         (error)=>{
           console.log('Error saving Hospital Data', error);

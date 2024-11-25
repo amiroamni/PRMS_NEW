@@ -11,6 +11,9 @@ import { HospitalDoctorComponent } from './HospitalAdmin/Register/doctor/doctor.
 import { ClinicDoctorComponent } from './ClinicalAdmin/Register/doctor/doctor.component';
 import { HospitalRegisterdComponent } from './Admin/Register/hospital-registerd/hospital-registerd.component';
 import { HospitalstuffComponent } from './HospitalAdmin/Register/hospitalstuff/hospitalstuff.component';
+import { ClinicalstuffComponent } from './ClinicalAdmin/Register/clinicalstuff/clinicalstuff.component';
+import { ClinicRegisterdComponent } from './ClinicalAdmin/Register/hospital-registerd/hospital-registerd.component';
+import { HospitalsRegisterdComponent } from './HospitalAdmin/Register/hospital-registerd/hospital-registerd.component';
 const routes: Routes = [
 
    {
@@ -20,7 +23,19 @@ const routes: Routes = [
   {
     path:'Credential',
     component:HospitalRegisterdComponent,
-    canActivate: [AuthGuard],data:{permittedRoles : ['Adminstrator','ClinicAdmin','HospitalAdmin']}
+    canActivate: [AuthGuard],data:{permittedRoles : ['Adminstrator']}
+
+  },
+  {
+    path:'Clinic-Doctor-Credential',
+    component:ClinicRegisterdComponent,
+    canActivate: [AuthGuard],data:{permittedRoles : ['ClinicAdmin']}
+
+  },
+    {
+    path:'Hospitals-Doctor-Credential',
+    component: HospitalsRegisterdComponent,
+    canActivate: [AuthGuard],data:{permittedRoles : ['HospitalAdmin']}
 
   },
   {
@@ -48,7 +63,7 @@ const routes: Routes = [
   },
   {
     path: 'clinicStuff', 
-    component: ClinicDoctorComponent,
+    component: ClinicalstuffComponent,
     canActivate: [AuthGuard],data:{permittedRoles : ['ClinicAdmin']}
   },
   {

@@ -8,7 +8,7 @@ import { RegisterService } from '../register.service';
   templateUrl: './hospital-registerd.component.html',
   styleUrl: './hospital-registerd.component.scss'
 })
-export class ClinicRegisterdComponent {
+export class HospitalsRegisterdComponent {
   hospitalCredentials: { email: string; password: string } | null = null;
   hospitalName: string = 'Example Hospital'; // Replace with actual hospital data
 

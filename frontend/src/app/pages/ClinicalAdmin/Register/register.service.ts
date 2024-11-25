@@ -4,7 +4,7 @@ import { environment } from 'src/environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
-import { Doctor, Stuff } from './Register';
+import { Doctor, ClinicStuff } from './Register';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +25,7 @@ export class RegisterService {
        
         const { email , password } = response
         console.log(response)
+
         this.updateCredentials(email, password)
         
         // Assuming the response has 'email' and 'password' properties
@@ -35,8 +36,22 @@ export class RegisterService {
       })
     );
   }
-  saveStuff(StuffData: Stuff): Observable<any> {
-    return this.http.post(this.apiUrl + "/hospitals", StuffData);
+  saveStuff(StuffData: ClinicStuff):  Observable<{ email: string; password: string }>{
+    return this.http.post<any>(this.apiUrl + "/api/ClinicStaff/withtoken", StuffData).pipe(
+      map(response => {
+       
+        const { email , password } = response
+        console.log(response)
+
+        this.updateCredentials(email, password)
+        
+        // Assuming the response has 'email' and 'password' properties
+        return {
+          email: response.email,
+          password: response.password
+        };
+      })
+    );
   }
 
 

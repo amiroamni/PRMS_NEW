@@ -5,16 +5,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { RegisterService } from '../register.service';
 import { ToastService } from 'src/app/account/login/toast-service';
-import { Stuff } from '../Register';
+import { ClinicStuff } from '../Register';
 
 @Component({
   selector: 'app-clinicalstuff',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule , ReactiveFormsModule],
   templateUrl: './clinicalstuff.component.html',
   styleUrl: './clinicalstuff.component.scss'
 })
-export class ClinicalstuffComponent {
+export class ClinicalstuffComponent implements OnInit{
 
 
   StuffForm!: FormGroup;
@@ -29,9 +29,9 @@ export class ClinicalstuffComponent {
     this.StuffForm = this.fb.group({
       firstname: ['', Validators.required],
       middlename: ['',Validators.required], 
-      lastname: ['', [Validators.required, ]], // Assuming a 10-digit phone number
+      lastname: ['', [Validators.required ]], // Assuming a 10-digit phone number
       gender: ['', [Validators.required]],
-      hospitalStaffPhone: ['', Validators.required, Validators.pattern(/^[0-9]{10}$/)], 
+      clinicPhone: ['', [Validators.required, Validators.pattern(/^[0-9]{10}$/)]], 
       emailAddress: ['', [Validators.required, Validators.email]],
       role: ['', Validators.required],   
       // workPermit: [null, Validators.required],
@@ -63,12 +63,13 @@ export class ClinicalstuffComponent {
     if (this.StuffForm.valid) {
 
 
-      const StuffData: Stuff = this.StuffForm.value;
+      const StuffData: ClinicStuff = this.StuffForm.value;
 
       console.log(StuffData);
+
       this.Registerservice.saveStuff(StuffData).subscribe(
         (response)=>{
-          console.log('Doctor data saved:', response);
+          console.log('Clinic Stuff data saved:', response);
 
     // Assuming the response contains email and password
           const { email, password } = response;
@@ -76,7 +77,7 @@ export class ClinicalstuffComponent {
           this.router.navigate(['/Credential']);
         },
         (error)=>{
-          console.log('Error saving Hospital Data', error);
+          console.log('Error saving ClinicStuff Data', error);
         }
       );
       // You can add your form submission logic here
