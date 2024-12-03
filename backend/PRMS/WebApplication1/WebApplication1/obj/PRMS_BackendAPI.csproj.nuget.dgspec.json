@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj": {}
+    "C:\\Users\\age40\\Documents\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj": {
+    "C:\\Users\\age40\\Documents\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj",
+        "projectUniqueName": "C:\\Users\\age40\\Documents\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj",
         "projectName": "PRMS_BackendAPI",
-        "projectPath": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj",
+        "projectPath": "C:\\Users\\age40\\Documents\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj",
         "packagesPath": "C:\\Users\\age40\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\obj\\",
+        "outputPath": "C:\\Users\\age40\\Documents\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,6 +69,14 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.32, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Common": {
+              "target": "Package",
+              "version": "[8.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

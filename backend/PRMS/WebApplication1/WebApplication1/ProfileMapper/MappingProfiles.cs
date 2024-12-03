@@ -17,7 +17,7 @@ namespace PRMS_BackendAPI.ProfileMapper
             CreateMap<Appointment, AppointmentDTO>().ReverseMap();
             CreateMap<Clinic, ClinicDTO>().ReverseMap();
             CreateMap<ClinicStaff, ClinicStaffDTO>().ReverseMap();
-            CreateMap<Doctor, DoctorDTO>().ReverseMap();
+            CreateMap<Doctor, DoctorDTO>().ReverseMap();    
             CreateMap<Hospital, HospitalDTO>().ReverseMap();
             CreateMap<HospitalStaff, HospitalStaffDTO>().ReverseMap();
             CreateMap<MedicalRecord, MedicalRecordDTO>().ReverseMap();

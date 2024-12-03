@@ -9,7 +9,11 @@
         public string Role { get; set; } = null!;
         public int? ClinicId { get; set; }
         public int? HospitalId { get; set; }
-        public string? UserName { get; set; }
+        public string UserName { get; set; } = null!;
+        public int? DoctorId { get; set; }
+        public int? PatientId { get; set; }
+        public string? HopitalName { get; set; }
+        public string? ClinicName { get; set; }
 
     }
 }

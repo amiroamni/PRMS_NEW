@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PRMS_BackendAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8560b87b7ed3eb4f7ad60766e069a2421a88363f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+739d877da176194f185a9ca1a3e79acb34ebc4e9")]
 [assembly: System.Reflection.AssemblyProductAttribute("PRMS_BackendAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PRMS_BackendAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,6 +9,7 @@ namespace PRMS_BackendAPI.Models
         {
             Appointments = new HashSet<Appointment>();
             Referrals = new HashSet<Referral>();
+            Users = new HashSet<User>();
         }
 
         public int PatientId { get; set; }
@@ -23,5 +24,6 @@ namespace PRMS_BackendAPI.Models
 
         public virtual ICollection<Appointment> Appointments { get; set; }
         public virtual ICollection<Referral> Referrals { get; set; }
+        public virtual ICollection<User> Users { get; set; }
     }
 }

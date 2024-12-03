@@ -88,14 +88,14 @@ namespace WebApplication1.Controllers
             }
 
             // Step 1: Map the Doctor DTO to the Doctor entity
-            var clinic = _mapper.Map<ClinicStaff>(clinicStaffDTO);
-
+            var clinicstaff = _mapper.Map<ClinicStaff>(clinicStaffDTO);
+           
             // Step 2: Add Doctor to Database
-            _dbContext.ClinicStaffs.Add(clinic);
+            _dbContext.ClinicStaffs.Add(clinicstaff);
             await _dbContext.SaveChangesAsync();
 
             // Step 3: Generate email and password for the doctor
-            var generatedEmail = $"{clinic.EmailAddress.ToLower().Replace(" ", "")}";
+            var generatedEmail = $"{clinicstaff.EmailAddress.ToLower().Replace(" ", "")}";
             var generatedPassword = GenerateRandomPassword();
 
             var newUser = new ApplicationUser
@@ -103,8 +103,8 @@ namespace WebApplication1.Controllers
                 Email = generatedEmail,
                 UserName = generatedEmail,
                 EmailConfirmed = true,
-                FirstName = clinic.FirstName,
-                LastName = clinic.LastName,
+                FirstName = clinicstaff.FirstName,
+                LastName = clinicstaff.LastName,
                 Role = "ClinicStaff"  // Assign a role to the doctor
             };
 
@@ -122,14 +122,15 @@ namespace WebApplication1.Controllers
                 ModifiedDate = DateTime.UtcNow,
                 UserName = newUser.FirstName,
                 CreatedBy = newUser.Role,
-                ClinicId = clinic.ClinicId,
+                ClinicId = clinicstaff.ClinicId,
+                
             };
 
             _dbContext.Users.Add(newUserEntity);
             await _dbContext.SaveChangesAsync();
 
             // Step 6: Map the saved Doctor to DoctorDTO
-            var savedCSDTO = _mapper.Map<ClinicStaffDTO>(clinic);
+            var savedCSDTO = _mapper.Map<ClinicStaffDTO>(clinicstaff);
 
             // Step 7: Return the saved doctor, email, and password for further processing
             return Ok(new { doctor = savedCSDTO, email = generatedEmail, password = generatedPassword });

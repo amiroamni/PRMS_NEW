@@ -3,6 +3,7 @@
     public class DoctorDTO
     {
 
+
         public int DoctorId { get; set; }
         public string DoctorFirstName { get; set; } = null!;
         public string? DoctorMiddleName { get; set; }

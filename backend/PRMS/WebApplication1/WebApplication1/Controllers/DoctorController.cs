@@ -14,7 +14,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using PRMS_BackendAPI.Identity;
-using System.Data.Entity;
+
 namespace PRMS_BackendAPI.Controllers
 {
     [Route("api/[Controller]")]
@@ -52,6 +52,10 @@ namespace PRMS_BackendAPI.Controllers
             {
                 return NotFound();
             }
+            var doctors = await _dbContext.Doctors
+        .Include(d => d.Hospital)
+        .Include(d => d.Clinic)
+        .ToListAsync();
 
             var doctordto = _mapper.Map<List<DoctorDTO>>(_dbContext.Doctors);
             return Ok(doctordto);
@@ -83,7 +87,7 @@ namespace PRMS_BackendAPI.Controllers
 
 
         [HttpPost("withtoken")]
-        public async Task<ActionResult<DoctorDTO>> PostDoctors(DoctorDTO doctorDTO)
+        public async Task<ActionResult<DoctorDTO>> PostDoctors(DoctorDTO doctorPostDto)
         {
             if (_dbContext.Doctors == null)
             {
@@ -91,7 +95,7 @@ namespace PRMS_BackendAPI.Controllers
             }
 
             // Step 1: Map the Doctor DTO to the Doctor entity
-            var doctor = _mapper.Map<Doctor>(doctorDTO);
+            var doctor = _mapper.Map<Doctor>(doctorPostDto);
 
             // Step 2: Add Doctor to Database
             _dbContext.Doctors.Add(doctor);
@@ -125,16 +129,21 @@ namespace PRMS_BackendAPI.Controllers
                 ModifiedDate = DateTime.UtcNow,
                 UserName = newUser.FirstName,
                 CreatedBy = "superAdmin",
+
             };
 
             _dbContext.Users.Add(newUserEntity);
             await _dbContext.SaveChangesAsync();
-
-            // Step 6: Map the saved Doctor to DoctorDTO
+           
+            var doctorWithRelations = await _dbContext.Doctors
+              .Include(d => d.Hospital)
+             .Include(d => d.Clinic)
+              .FirstOrDefaultAsync(d => d.DoctorId == doctor.DoctorId);
+            
             var savedDoctorDTO = _mapper.Map<DoctorDTO>(doctor);
 
             // Step 7: Return the saved doctor, email, and password for further processing
-            return Ok(new { doctor = savedDoctorDTO, email = generatedEmail, password = generatedPassword });
+            return Ok(new { doctor = doctorWithRelations, email = generatedEmail, password = generatedPassword });
         }
 
 

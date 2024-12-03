@@ -12,9 +12,15 @@ namespace PRMS_BackendAPI.Models
         public string Role { get; set; } = null!;
         public int? ClinicId { get; set; }
         public int? HospitalId { get; set; }
-        public string? UserName { get; set; }
+        public string UserName { get; set; } = null!;
+        public int? DoctorId { get; set; }
+        public int? PatientId { get; set; }
+        public string? HopitalName { get; set; }
+        public string? ClinicName { get; set; }
 
         public virtual Clinic? Clinic { get; set; }
+        public virtual Doctor? Doctor { get; set; }
         public virtual Hospital? Hospital { get; set; }
+        public virtual Pateient? Patient { get; set; }
     }
 }

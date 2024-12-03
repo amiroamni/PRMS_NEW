@@ -587,7 +587,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "doctorDTO",
+        "Name": "doctorPostDto",
         "Type": "PRMS_BackendAPI.DTO.DoctorDTO",
         "IsRequired": true
       }

@@ -132,6 +132,7 @@ namespace WebApplication1.Controllers
                 ModifiedDate = DateTime.UtcNow,
                 UserName = newUser.FirstName,
                 CreatedBy = newUser.Role,
+                ClinicName = clinic.ClinicName
             };
 
             _dbContext.Users.Add(newUserEntity);

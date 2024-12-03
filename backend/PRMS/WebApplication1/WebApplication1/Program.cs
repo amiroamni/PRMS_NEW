@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Identity;
 using PRMS_BackendAPI.Identity.Infra_Identitiy;
 using PRMS_BackendAPI.Identity.Identitys;
 using PRMS_BackendAPI.Models;
+using PRMS_BackendAPI.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 // Add services to the container.
 builder.Services.AddControllers();
+builder.Services.AddSignalR();
+
 
 // Configure DbContext for Identity
 builder.Services.AddDbContext<PRMS_DatabaseContext>(options =>
@@ -84,10 +87,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "PRMS_BackendAPI.Api v1"));
 }
-
+app.UseRouting();
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseCors("AllowAllOrigins");
 app.MapControllers();
+
+app.UseEndpoints(endpoints =>
+{
+
+
+    endpoints.MapControllers();
+    endpoints.MapHub<CommunicationHub>("/ChatHub");
+});
+//app.MapHub<CommunicationHub>("/chat-hub");
 app.Run();
