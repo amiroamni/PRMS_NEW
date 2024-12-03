@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TsFCUY4lY2g=",
+  "dgSpecHash": "UO11OZ5sMgs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\age40\\Documents\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj",
+  "projectFilePath": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\age40\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\age40\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

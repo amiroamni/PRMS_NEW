@@ -225,7 +225,7 @@ namespace PRMS_BackendAPI.Models
                     .HasMaxLength(20)
                     .HasColumnName("Doctor_Phone");
 
-                entity.Property(e => e.Gender).HasMaxLength(1);
+                entity.Property(e => e.Gender).HasMaxLength(10);
 
                 entity.Property(e => e.HospitalId).HasColumnName("Hospital_Id");
 
@@ -334,7 +334,7 @@ namespace PRMS_BackendAPI.Models
 
                 entity.Property(e => e.Address).HasMaxLength(120);
 
-                entity.Property(e => e.Gender).HasMaxLength(1);
+                entity.Property(e => e.Gender).HasMaxLength(10);
 
                 entity.Property(e => e.MedicalRecordId).HasColumnName("MedicalRecord_id");
 

@@ -14,5 +14,7 @@
         public int? HospitalId { get; set; }
         public string? SpecializationId { get; set; }
         public int? ClinicId { get; set; }
+        public string? HospitalName { get; set; }
+        public string? ClinicName { get; set; }
     }
 }

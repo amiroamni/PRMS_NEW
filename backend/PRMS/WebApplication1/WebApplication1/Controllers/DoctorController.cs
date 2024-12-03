@@ -14,6 +14,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using PRMS_BackendAPI.Identity;
+using System.Numerics;
 
 namespace PRMS_BackendAPI.Controllers
 {
@@ -28,6 +29,8 @@ namespace PRMS_BackendAPI.Controllers
         private readonly IAuthService _authenticationService;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly JwtSettings _jwtSettings;
+ 
+
 
         public DoctorController(PRMS_DatabaseContext dbContext,
           IMapper mapper,
@@ -47,20 +50,25 @@ namespace PRMS_BackendAPI.Controllers
         [HttpGet]
         public async Task<ActionResult<List<DoctorDTO>>> GetDoctor()
         {
-
             if (_dbContext.Doctors == null)
             {
                 return NotFound();
             }
+
             var doctors = await _dbContext.Doctors
-        .Include(d => d.Hospital)
-        .Include(d => d.Clinic)
-        .ToListAsync();
+                .Include(d => d.Hospital)
+                .Include(d => d.Clinic)
+                .ToListAsync();
 
-            var doctordto = _mapper.Map<List<DoctorDTO>>(_dbContext.Doctors);
-            return Ok(doctordto);
+            var doctorDTOs = doctors.Select(doctor => {
+                var dto = _mapper.Map<DoctorDTO>(doctor);
+                dto.HospitalName = doctor.Hospital?.HospitalName;
+                dto.ClinicName = doctor.Clinic?.ClinicName;
+                return dto;
+            }).ToList();
+
+            return Ok(doctorDTOs);
         }
-
 
 
         [HttpPost]
@@ -122,6 +130,22 @@ namespace PRMS_BackendAPI.Controllers
                 return BadRequest(result.Errors);
             }
 
+            var hospital = await _dbContext.Hospitals.FindAsync(doctor.HospitalId);
+            var clinic = await _dbContext.Clinics.FindAsync(doctor.ClinicId);
+
+            string hospitalName = null;
+            string clinicName = null;
+
+            if (hospital != null)
+            {
+                hospitalName = hospital.HospitalName;
+            }
+
+            if (clinic != null)
+            {
+                clinicName = clinic.ClinicName;
+            }
+
             var newUserEntity = new User
             {
                 Password = generatedPassword,
@@ -129,21 +153,23 @@ namespace PRMS_BackendAPI.Controllers
                 ModifiedDate = DateTime.UtcNow,
                 UserName = newUser.FirstName,
                 CreatedBy = "superAdmin",
+                DoctorId= doctor.DoctorId,
+                HospitalId = doctor.HospitalId,
+                ClinicId = doctor.ClinicId,
+                HopitalName = hospitalName,
+                ClinicName = clinicName,
 
             };
 
             _dbContext.Users.Add(newUserEntity);
             await _dbContext.SaveChangesAsync();
            
-            var doctorWithRelations = await _dbContext.Doctors
-              .Include(d => d.Hospital)
-             .Include(d => d.Clinic)
-              .FirstOrDefaultAsync(d => d.DoctorId == doctor.DoctorId);
+            
             
             var savedDoctorDTO = _mapper.Map<DoctorDTO>(doctor);
 
             // Step 7: Return the saved doctor, email, and password for further processing
-            return Ok(new { doctor = doctorWithRelations, email = generatedEmail, password = generatedPassword });
+            return Ok(new { doctor = savedDoctorDTO, email = generatedEmail, password = generatedPassword, hospitalName , clinicName });
         }
 
 
@@ -211,16 +237,29 @@ namespace PRMS_BackendAPI.Controllers
 
         private string GenerateRandomPassword(int length = 12)
         {
-            const string validChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()";
-            var random = new Random();
-            var result = new char[length];
+            const string upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const string lowerCase = "abcdefghijklmnopqrstuvwxyz";
+            const string digits = "0123456789";
+            const string special = "!@#$%^&*()";
 
-            for (int i = 0; i < length; i++)
+            var random = new Random();
+            var password = new StringBuilder();
+
+            // Ensure at least one of each required character type
+            password.Append(upperCase[random.Next(upperCase.Length)]);  // Upper case
+            password.Append(lowerCase[random.Next(lowerCase.Length)]);  // Lower case
+            password.Append(digits[random.Next(digits.Length)]);        // Digit
+            password.Append(special[random.Next(special.Length)]);      // Special char
+
+            // Fill the rest with random characters
+            var allChars = upperCase + lowerCase + digits + special;
+            for (int i = password.Length; i < length; i++)
             {
-                result[i] = validChars[random.Next(validChars.Length)];
+                password.Append(allChars[random.Next(allChars.Length)]);
             }
 
-            return new string(result);
+            // Shuffle the password
+            return new string(password.ToString().ToCharArray().OrderBy(x => random.Next()).ToArray());
         }
 
     }

@@ -13165,11 +13165,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\age40\\Documents\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj",
+      "projectUniqueName": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj",
       "projectName": "PRMS_BackendAPI",
-      "projectPath": "C:\\Users\\age40\\Documents\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj",
+      "projectPath": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\PRMS_BackendAPI.csproj",
       "packagesPath": "C:\\Users\\age40\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\age40\\Documents\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\obj\\",
+      "outputPath": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
