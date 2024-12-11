@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using PRMS_BackendAPI.Identity.IdentityInterface;
 using PRMS_BackendAPI.Identity.Identitys;
 
 namespace PRMS_BackendAPI.Controllers
 {
+    [EnableCors("AllowAllOrigins")]
     [ApiController]
     [Route("api/[controller]")]
     public class AccountController : ControllerBase

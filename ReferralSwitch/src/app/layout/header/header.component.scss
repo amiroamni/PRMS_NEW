@@ -1,0 +1,33 @@
+// Default transparent background
+.navbar {
+  background-color: transparent !important;
+  transition: background-color 0.3s ease-in-out, font-size 0.3s ease-in-out; /* Adding transition for font size */
+  
+  .nav-link {
+    font-size: 1.3rem; /* Default font size for the navbar links */
+    color: #d6d6d6; /* Default link color */
+    transition: color 0.3s ease-in-out; /* Transition for color change */
+    padding-left: 25px;
+  }
+  .nav-link:hover {
+    font-size: 1.4rem; /* Default font size for the navbar links */
+    color: #007bff; /* Default link color */
+    transition: color 0.3s ease-in-out; /* Transition for color change */
+   
+    
+  }
+
+  // White background when scrolled
+  &.scrolled {
+    background-color: white !important;
+
+    .nav-link {
+      color: #007bff; // Color for links when scrolled
+      font-size: 1.3rem; /* Larger font size when navbar is scrolled */
+    }
+    .nav-link:hover{
+      color: #000000; // Color for links when scrolled
+      font-size: 1.4rem; /* Larger font size when navbar is scrolled */
+    }
+  }
+}

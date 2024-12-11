@@ -1,0 +1,424 @@
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent image overflow */
+
+  .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../assets/Image/refferal-mgmt-top-banner-1-min-scaled.webp'); /* Path to your image */
+    background-size: cover; /* Ensure the image covers the container */
+    background-position: center; /* Center the image */
+    z-index: -1; /* Place the image behind the content */
+  }
+
+  /* Gradient shadow effect */
+  .background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0.5, 0.9) 0%, rgba(0, 0, 0, 0) 100%); /* Dark at the top, transparent at the bottom */
+    z-index: -1; /* Ensures shadow is below the content */
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 3%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Keeps the content vertically centered */
+    align-items: flex-start; /* Aligns content to the left */
+    color: white;
+    text-align: left; /* Aligns text to the left */
+    padding: 20px;
+    z-index: 1; /* Ensures the content is above the background */
+  }
+}
+
+.cards-section {
+  margin-top: 50px; /* Add space between the hero section and the cards */
+  padding: 40px 0;
+  background-color: #f4f4f4;
+
+  .card {
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adding transition for box-shadow */
+
+    /* Add shadow to the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow */
+
+    &:hover {
+      transform: translateY(-5px); /* Lift the card on hover */
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+    }
+
+   
+  }
+}
+.cards-section .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  width: 100%; /* Ensure full width */
+  background-image: url('../../../assets/Image/vission.jpg'); /* Path to your image */
+
+}
+
+
+.about-us-section {
+  padding: 40px 0;
+  margin-top: 50px; 
+  background-color: #f9f9f9;
+  
+  .con{
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  .about-us-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  .about-us-img {
+    max-width: 100%;
+    height: auto;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 1s ease-out;
+    background-image: url('../../../assets/Image/mission.jpg');
+
+    &.left-img {
+      animation: slideInFromLeft 1s forwards;
+    }
+
+    &.right-img {
+      animation: slideInFromRight 1s forwards;
+    }
+  }
+
+  .about-us-description {
+    font-size: 1.1rem;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease-out;
+
+    &.left-description {
+      animation: fadeInFromLeft 1s forwards;
+    }
+
+    &.right-description {
+      animation: fadeInFromRight 1s forwards;
+    }
+  }
+}
+
+/* Animation for the image and description */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromLeft {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInFromRight {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.statistics-section {
+  padding: 50px 0;
+  background-color: #118cff;
+}
+
+.stat-item {
+  margin: 20px 0;
+}
+
+.stat-item h2 {
+  font-size: 2.5rem;
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.stat-item.visible h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stat-item p {
+  font-size: 1.2rem;
+  color: #555;
+}
+.statistics-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.count {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000000;
+
+}
+
+.count p{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .home-container {
+    height: auto; /* Allow height to adjust on smaller screens */
+  }
+
+  .content h1 {
+    font-size: 2rem; /* Adjust text size on small screens */
+  }
+
+  .cards-section .card {
+    margin-bottom: 10px; /* Less space between cards on smaller screens */
+  }
+}
+
+
+.meet-the-team-container {
+  padding: 70px 0;
+  background-color: #f8f9fa;
+  margin-top: 50px;
+}
+.meet-the-team-container h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.meet-the-team-container p{
+
+  font-size: 1rem;
+}
+
+.team-member-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: transform 0.3s;
+  margin-top: 30px;
+}
+.team-member-card:hover {
+  transform: translateY(-5px);
+}
+.team-img {
+  width: 100%;
+  
+  margin-bottom: 15px;
+  background-image: url('../../../assets/Image/logooo.webp');
+  background-size: cover;
+  background-position: center;
+}
+.team-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.team-role {
+  font-size: 16px;
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+.team-bio {
+  font-size: 14px;
+  color: #343a40;
+}
+
+.testimonial-container {
+  padding: 40px 0;
+
+}
+
+.testimonial-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  background-color: #5aa6e8;
+}
+
+.testimonial-card:hover{
+  background-color: #5aa6e86d;
+}
+
+.testimonial-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.testimonial-name {
+  font-weight: bold;
+}
+
+.testimonial-role {
+  font-style: italic;
+  color: #555;
+}
+
+.testimonial-text {
+  font-size: 1rem;
+  color: #333;
+}
+
+.cta-container {
+  background-color: #343a40;
+  padding: 30px 0;
+  margin-top: 40px;
+  color: #f4f4f4;
+}
+
+.cta-container button {
+  padding: 12px 25px;
+  font-size: 1rem;
+}
+
+.sponsors-container {
+  padding: 40px 0;
+  background-color: #343a40;
+  margin-top: 60px;
+  color: #f4f4f4;
+}
+
+.sponsors-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.sponsors-row {
+  display: flex;
+  justify-content: space-around;
+  animation: slideSponsors 15s linear infinite;
+}
+
+.sponsor-logo {
+  flex: 0 0 auto;
+  margin: 0 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-logo img {
+  max-width: 150px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+@keyframes slideSponsors {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.contact-us-container {
+  padding: 40px 0;
+  background-color: #f8f9fa;
+}
+
+.contact-form {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.map-container {
+  height: 350px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+} 

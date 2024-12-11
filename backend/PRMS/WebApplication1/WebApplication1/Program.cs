@@ -39,9 +39,17 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAllOrigins",
         builder =>
         {
-            builder.AllowAnyOrigin()
-                   .AllowAnyMethod()
-                   .AllowAnyHeader();
+            builder.WithOrigins(
+                    "http://localhost:4200",     // Angular HTTP
+                    "https://localhost:4200",    // Angular HTTPS
+                    "http://localhost:44386",    // Backend HTTP
+                    "https://localhost:44386"    // Backend HTTPS
+                )
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials()
+                .SetIsOriginAllowed(origin => true) // This is more permissive for development
+                .WithExposedHeaders("Content-Disposition"); // If you need to expose any headers
         });
 });
 

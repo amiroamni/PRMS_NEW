@@ -1,0 +1,53 @@
+<form [formGroup]="ChatForm">
+  <div class="form-group mb-3">
+    <label for="messageContent" class="font-weight-medium">Message</label>
+    <input 
+      id="messageContent" 
+      formControlName="messageContent" 
+      type="text" 
+      class="form-control" 
+      [class.is-invalid]="ChatForm.get('messageContent')?.invalid && ChatForm.get('messageContent')?.touched" 
+      placeholder="Type a message..." 
+    />
+    <div 
+      *ngIf="ChatForm.get('messageContent')?.invalid && ChatForm.get('messageContent')?.touched" 
+      class="text-danger small mt-1"
+    >
+      Message content is required
+    </div>
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="userId" class="font-weight-medium">User ID (for one-to-one)</label>
+    <input 
+      id="userId" 
+      formControlName="userId" 
+      type="text" 
+      class="form-control" 
+      [class.is-invalid]="ChatForm.get('userId')?.invalid && ChatForm.get('userId')?.touched" 
+      placeholder="Enter User ID" 
+    />
+    <div 
+      *ngIf="ChatForm.get('userId')?.invalid && ChatForm.get('userId')?.touched" 
+      class="text-danger small mt-1"
+    >
+      User ID is required
+    </div>
+  </div>
+
+  <div class="d-flex align-items-center">
+    <button 
+      class="btn btn-primary" 
+      (click)="sendMessage()"
+      [disabled]="ChatForm.invalid"
+    >
+      Send
+    </button>
+  </div>
+</form>
+
+<div class="message-list mt-3">
+  <div *ngFor="let message of chatService.messages()" class="message">
+    {{ message }}
+  </div>
+</div>

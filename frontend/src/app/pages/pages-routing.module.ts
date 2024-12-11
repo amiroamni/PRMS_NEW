@@ -5,6 +5,7 @@ import { IndexComponent } from './index/index.component';
 import { AuthGuard } from '../core/guards/auth.guard';
 
 // Component pages
+import { ChatComponent } from './chat/chat.component';
 import { HospitalsComponent } from './Admin/Register/hospitals/hospitals.component';
 import { ClinicsComponent } from './Admin/Register/clinics/clinics.component';
 import { HospitalDoctorComponent } from './HospitalAdmin/Register/doctor/doctor.component';
@@ -71,7 +72,11 @@ const routes: Routes = [
     component: ClinicDoctorComponent,
     canActivate: [AuthGuard],data:{permittedRoles : ['ClinicAdmin']}
   },
-  
+  {
+    path: 'message',
+    component: ChatComponent,
+    canActivate: [AuthGuard],data:{permittedRoles : ['Doctor']}
+  }
  
 ];
 

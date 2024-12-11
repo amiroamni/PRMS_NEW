@@ -60,6 +60,13 @@ export const MENU: MenuItem[] = [
             parentId: 2,
             role:['ClinicAdmin']
           },
+          {
+            id: 10,
+            label: 'chat',
+            link: '/message',
+            parentId: 2,
+            role:['Doctor']
+          },
        
         ]
       },
