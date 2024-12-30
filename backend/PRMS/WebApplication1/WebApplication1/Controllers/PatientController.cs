@@ -34,6 +34,29 @@ namespace WebApplication1.Controllers
             return Ok(PatientDTO);
         }
 
+
+        [HttpGet("byPhoneNumber/{phoneNumber}")]
+        public async Task<ActionResult<patientDTO>> GetPatient(string phoneNumber)
+        {
+            if (_dbContext.Pateients == null)
+            {
+                return NotFound();
+            }
+
+            var patient = await _dbContext.Pateients
+                .FirstOrDefaultAsync(p => p.PatientPhoneNumeber == phoneNumber);
+
+            if (patient == null)
+            {
+                return NotFound();
+            }
+
+            var patientDTO = _mapper.Map<patientDTO>(patient);
+            return Ok(patientDTO);
+        }
+
+
+
         [HttpPost]
         public async Task<ActionResult<patientDTO>> PostPatienr(patientDTO patientDTOs)
         {

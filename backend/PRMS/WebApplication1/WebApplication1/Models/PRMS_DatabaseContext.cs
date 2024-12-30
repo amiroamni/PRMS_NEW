@@ -36,14 +36,12 @@ namespace PRMS_BackendAPI.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=NAHI;Database=PRMS_Database;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=DESKTOP-UGVSS12;Database=PRMS_Database;Trusted_Connection=True;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.UseCollation("SQL_Latin1_General_CP1_CI_AS");
-
             modelBuilder.Entity<Appointment>(entity =>
             {
                 entity.ToTable("Appointment");
@@ -336,6 +334,8 @@ namespace PRMS_BackendAPI.Models
 
                 entity.Property(e => e.Address).HasMaxLength(120);
 
+                entity.Property(e => e.Age).HasMaxLength(50);
+
                 entity.Property(e => e.Gender).HasMaxLength(10);
 
                 entity.Property(e => e.MedicalRecordId).HasColumnName("MedicalRecord_id");
@@ -356,9 +356,9 @@ namespace PRMS_BackendAPI.Models
                     .HasMaxLength(50)
                     .HasColumnName("Patient_MiddleName");
 
-                entity.Property(e => e.PatientPhone)
+                entity.Property(e => e.PatientPhoneNumeber)
                     .HasMaxLength(20)
-                    .HasColumnName("Patient_Phone");
+                    .HasColumnName("Patient_PhoneNumeber");
             });
 
             modelBuilder.Entity<Referral>(entity =>
@@ -369,7 +369,19 @@ namespace PRMS_BackendAPI.Models
 
                 entity.Property(e => e.AppointmentId).HasColumnName("Appointment_id");
 
+                entity.Property(e => e.Attachment).HasMaxLength(100);
+
+                entity.Property(e => e.ClinicFindings)
+                    .HasMaxLength(250)
+                    .HasColumnName("Clinic_Findings");
+
+                entity.Property(e => e.ClinicId).HasColumnName("Clinic_Id");
+
                 entity.Property(e => e.DateOfReferral).HasColumnType("datetime");
+
+                entity.Property(e => e.Department).HasMaxLength(50);
+
+                entity.Property(e => e.DiagnosisResult).HasMaxLength(150);
 
                 entity.Property(e => e.DoctorId).HasColumnName("Doctor_Id");
 
@@ -377,9 +389,17 @@ namespace PRMS_BackendAPI.Models
 
                 entity.Property(e => e.PatientId).HasColumnName("Patient_Id");
 
+                entity.Property(e => e.ReasonsForReferrals).HasMaxLength(100);
+
                 entity.Property(e => e.ReferralDescription)
                     .HasMaxLength(150)
                     .HasColumnName("Referral_description");
+
+                entity.Property(e => e.RxGiven)
+                    .HasMaxLength(50)
+                    .HasColumnName("rxGiven");
+
+                entity.Property(e => e.Status).HasMaxLength(50);
 
                 entity.HasOne(d => d.Appointment)
                     .WithMany(p => p.Referrals)

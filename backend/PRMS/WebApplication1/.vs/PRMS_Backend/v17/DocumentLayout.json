@@ -1,22 +1,114 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\natna\\OneDrive\\Desktop\\ReferralSwitch\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\",
+  "WorkspaceRootPath": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\natna\\onedrive\\desktop\\referralswitch\\prms_new\\backend\\prms\\webapplication1\\webapplication1\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\models\\prms_databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\models\\prms_databasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\models\\pateient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\models\\pateient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\dto\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\dto\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\controllers\\referralcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\controllers\\referralcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\dto\\referraldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\dto\\referraldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\models\\referral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\models\\referral.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\identity\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\identity\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\identity\\infra_identitiy\\prms_identitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\identity\\infra_identitiy\\prms_identitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\identity\\identitys\\registrationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\identity\\identitys\\registrationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\identity\\identitys\\registraionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\identity\\identitys\\registraionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\identity\\identitys\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\identity\\identitys\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\identity\\identitys\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\identity\\identitys\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\identity\\identitys\\authrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\identity\\identitys\\authrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\identity\\identityinterface\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\identity\\identityinterface\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\controllers\\hospitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\controllers\\hospitalcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\controllers\\doctorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\controllers\\clinicstaffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\controllers\\clinicstaffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\identity\\infra_identitiy\\configuration\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\identity\\infra_identitiy\\configuration\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\identity\\infra_identitiy\\configuration\\roleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\identity\\infra_identitiy\\configuration\\roleconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\controllers\\centeralcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\controllers\\centeralcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\identity\\infra_identitiy\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\identity\\infra_identitiy\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\natna\\onedrive\\desktop\\referralswitch\\prms_new\\backend\\prms\\webapplication1\\webapplication1\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\controllers\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\natna\\onedrive\\desktop\\referralswitch\\prms_new\\backend\\prms\\webapplication1\\webapplication1\\hubs\\chatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\age40\\documents\\seniorproject\\prms_fullstack\\backend\\prms\\webapplication1\\webapplication1\\hubs\\chatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\hubs\\chatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|c:\\users\\natna\\onedrive\\desktop\\referralswitch\\prms_new\\backend\\prms\\webapplication1\\webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC77FF06-4563-42A6-9A0D-F7660D862683}|WebApplication1\\PRMS_BackendAPI.csproj|solutionrelative:webapplication1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,27 +118,344 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Pateient.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Models\\Pateient.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Pateient.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Models\\Pateient.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\Pateient.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T20:17:57.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "patientDTO.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\DTO\\patientDTO.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\DTO\\patientDTO.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\DTO\\patientDTO.cs",
+              "RelativeToolTip": "WebApplication1\\DTO\\patientDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T20:17:48.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\PatientController.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\PatientController.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAAD4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T20:12:10.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Referral.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Models\\Referral.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Referral.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Models\\Referral.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\Referral.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA2wBsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T20:02:32.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\services\\AuthService.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Identity\\services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\services\\AuthService.cs",
+              "RelativeToolTip": "WebApplication1\\Identity\\services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T19:53:50.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AuthRequest.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Identitys\\AuthRequest.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Identity\\Identitys\\AuthRequest.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Identitys\\AuthRequest.cs",
+              "RelativeToolTip": "WebApplication1\\Identity\\Identitys\\AuthRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T19:52:37.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\IdentityInterface\\IAuthService.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Identity\\IdentityInterface\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\IdentityInterface\\IAuthService.cs",
+              "RelativeToolTip": "WebApplication1\\Identity\\IdentityInterface\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T19:52:33.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PRMS_DatabaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Models\\PRMS_DatabaseContext.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\PRMS_DatabaseContext.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Models\\PRMS_DatabaseContext.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\PRMS_DatabaseContext.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T17:52:38.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReferralController.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\ReferralController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ReferralController.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\ReferralController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\ReferralController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T20:02:44.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReferralDTO.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\DTO\\ReferralDTO.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\DTO\\ReferralDTO.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\DTO\\ReferralDTO.cs",
+              "RelativeToolTip": "WebApplication1\\DTO\\ReferralDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA1wBIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T20:02:50.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthResponse.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Identitys\\AuthResponse.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Identity\\Identitys\\AuthResponse.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Identitys\\AuthResponse.cs",
+              "RelativeToolTip": "WebApplication1\\Identity\\Identitys\\AuthResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T17:37:01.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JwtSettings.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Identitys\\JwtSettings.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Identity\\Identitys\\JwtSettings.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Identitys\\JwtSettings.cs",
+              "RelativeToolTip": "WebApplication1\\Identity\\Identitys\\JwtSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T17:37:17.555Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegistraionRequest.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Identitys\\RegistraionRequest.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Identity\\Identitys\\RegistraionRequest.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Identitys\\RegistraionRequest.cs",
+              "RelativeToolTip": "WebApplication1\\Identity\\Identitys\\RegistraionRequest.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T17:37:03.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegistrationResponse.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Identitys\\RegistrationResponse.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Identity\\Identitys\\RegistrationResponse.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Identitys\\RegistrationResponse.cs",
+              "RelativeToolTip": "WebApplication1\\Identity\\Identitys\\RegistrationResponse.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T17:37:08.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PRMS_IdentityDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Infra_Identitiy\\PRMS_IdentityDbContext.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Identity\\Infra_Identitiy\\PRMS_IdentityDbContext.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Infra_Identitiy\\PRMS_IdentityDbContext.cs",
+              "RelativeToolTip": "WebApplication1\\Identity\\Infra_Identitiy\\PRMS_IdentityDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T17:42:54.206Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RoleConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Infra_Identitiy\\Configuration\\RoleConfiguration.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Identity\\Infra_Identitiy\\Configuration\\RoleConfiguration.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Infra_Identitiy\\Configuration\\RoleConfiguration.cs",
+              "RelativeToolTip": "WebApplication1\\Identity\\Infra_Identitiy\\Configuration\\RoleConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T17:54:23.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ClinicStaffController.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\ClinicStaffController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ClinicStaffController.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\ClinicStaffController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\ClinicStaffController.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T18:42:39.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DoctorController.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\DoctorController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\DoctorController.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\DoctorController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\DoctorController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T18:43:05.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "HospitalController.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\HospitalController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\HospitalController.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\HospitalController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\HospitalController.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAAAKoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T18:44:08.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Infra_Identitiy\\Configuration\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Identity\\Infra_Identitiy\\Configuration\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Infra_Identitiy\\Configuration\\UserConfiguration.cs",
+              "RelativeToolTip": "WebApplication1\\Identity\\Infra_Identitiy\\Configuration\\UserConfiguration.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwBUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T17:42:59.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeDocumentMoniker": "WebApplication1\\appsettings.json",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\appsettings.json",
+              "RelativeToolTip": "WebApplication1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-30T17:50:29.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Infra_Identitiy\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Identity\\Infra_Identitiy\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Identity\\Infra_Identitiy\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "WebApplication1\\Identity\\Infra_Identitiy\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T17:42:47.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Program.cs",
+              "RelativeToolTip": "WebApplication1\\Program.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAUwG4AAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-31T15:42:21.503Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CenteralController.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\CenteralController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\CenteralController.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\CenteralController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\CenteralController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-30T17:43:39.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Hubs\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "WebApplication1\\Hubs\\ChatHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T18:45:35.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
               "Title": "ChatRepository.cs",
-              "DocumentMoniker": "C:\\Users\\natna\\OneDrive\\Desktop\\ReferralSwitch\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\Hubs\\ChatRepository.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Hubs\\ChatRepository.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Hubs\\ChatRepository.cs",
-              "ToolTip": "C:\\Users\\natna\\OneDrive\\Desktop\\ReferralSwitch\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\Hubs\\ChatRepository.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Hubs\\ChatRepository.cs",
               "RelativeToolTip": "WebApplication1\\Hubs\\ChatRepository.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAmwBAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -54,40 +463,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 25,
               "Title": "ChatController.cs",
-              "DocumentMoniker": "C:\\Users\\natna\\OneDrive\\Desktop\\ReferralSwitch\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\ChatController.cs",
               "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ChatController.cs",
-              "ToolTip": "C:\\Users\\natna\\OneDrive\\Desktop\\ReferralSwitch\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\ChatController.cs",
+              "ToolTip": "C:\\Users\\age40\\Documents\\SeniorProject\\PRMS_fullstack\\backend\\PRMS\\WebApplication1\\WebApplication1\\Controllers\\ChatController.cs",
               "RelativeToolTip": "WebApplication1\\Controllers\\ChatController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-24T19:09:22.844Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ChatHub.cs",
-              "DocumentMoniker": "C:\\Users\\natna\\OneDrive\\Desktop\\ReferralSwitch\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\Hubs\\ChatHub.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Hubs\\ChatHub.cs",
-              "ToolTip": "C:\\Users\\natna\\OneDrive\\Desktop\\ReferralSwitch\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\Hubs\\ChatHub.cs",
-              "RelativeToolTip": "WebApplication1\\Hubs\\ChatHub.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T18:45:35.897Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\natna\\OneDrive\\Desktop\\ReferralSwitch\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\Program.cs",
-              "RelativeDocumentMoniker": "WebApplication1\\Program.cs",
-              "ToolTip": "C:\\Users\\natna\\OneDrive\\Desktop\\ReferralSwitch\\PRMS_NEW\\backend\\PRMS\\WebApplication1\\WebApplication1\\Program.cs",
-              "RelativeToolTip": "WebApplication1\\Program.cs",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAUwG4AAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T15:42:21.503Z"
             }
           ]
         }

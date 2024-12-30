@@ -133,7 +133,8 @@ namespace PRMS_BackendAPI.Identity.services
         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         new Claim(JwtRegisteredClaimNames.Email, user.Email),
         new Claim("uid", user.Id),
-        new Claim("Role", role) // Single role claim, explicitly added
+        new Claim("Role", role) 
+        // Single role claim, explicitly added
     };
 
             // Include additional user claims if they exist
