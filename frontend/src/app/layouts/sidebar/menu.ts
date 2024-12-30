@@ -67,6 +67,13 @@ export const MENU: MenuItem[] = [
             parentId: 2,
             role:['Doctor']
           },
+          {
+            id: 11,
+            label: 'Request Referral',
+            link: '/Send-referral',
+            parentId: 2,
+            role:['Doctor']
+          },
        
         ]
       },

@@ -39,6 +39,8 @@ import { TodoEffects } from './store/Todo/todo_effect';
 import { ApplicationEffects } from './store/Jobs/jobs_effect';
 import { ApikeyEffects } from './store/APIKey/apikey_effect';
 import { AuthenticationEffects } from './store/Authentication/authentication.effects';
+import { HttpInterceptorService } from './core/helpers/http.interceptor';
+import { LoadingComponent } from './pages/loading/loading.component';
 
 export function createTranslateLoader(http: HttpClient): any {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -52,7 +54,7 @@ if (environment.defaultauth === 'firebase') {
 
 @NgModule({
   declarations: [
-    AppComponent
+
   ],
   imports: [
     TranslateModule.forRoot({
@@ -93,6 +95,7 @@ if (environment.defaultauth === 'firebase') {
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }, // Register AuthInterceptor
+    { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true}
   ],
   bootstrap: [AppComponent]
 })

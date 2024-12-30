@@ -1,61 +1,50 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ChatService } from 'src/app/core/services/chat.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { Router } from '@angular/router';
-import { messages } from 'src/app/layouts/topbar/data';
 
 @Component({
   selector: 'app-chat',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
-  templateUrl: './chat.component.html', // Use the external HTML file for better readability
+  templateUrl: './chat.component.html',
 })
-export class ChatComponent implements OnInit {
-  ChatForm!: FormGroup; // Define the form group for reactive forms
+export class ChatComponent implements OnInit, OnDestroy {
+  public chatForm: FormGroup;
+  public messages: string[] = [];
 
-  constructor(
-    private fb: FormBuilder, // FormBuilder for creating the form
-    public chatService: ChatService,
-    private router: Router
-  ) {}
+  constructor(private fb: FormBuilder, private chatService: ChatService) {
+    // Initialize the form group
+    this.chatForm = this.fb.group({
+      newMessage: ['', Validators.required],
+      userId: [''], // Optional field for private messages
+      groupName: [''], // Optional field for group messages
+    });
+  }
 
   ngOnInit(): void {
-    // Initialize the reactive form
-    this.ChatForm = this.fb.group({
-      messageContent: ['', Validators.required],
-      userId: ['', Validators.required], // User ID is required for one-to-one chat
-    });
-
-    // Load messages from the chat service (this will be updated in real-time)
-    this.loadMessages();
+    // React to message updates using signals
+    this.chatService.messages().forEach((message) => this.messages.push(message));
   }
 
-  // Fetch messages from the chat service
-  private loadMessages(): void {
-    this.chatService.hubConnection.on('ReceiveMessage', (message: string) => {
-      this.chatService.messages.update((messages) => [...messages, message]);
-
-      console.log('here is the message ')
-    });
-
-   
-  }
-
-  // Send the message
-  public sendMessage(): void {
-    if (this.ChatForm.valid) {
-      console.log(this.ChatForm.value);
-      const { messageContent, userId } = this.ChatForm.value;
-
-      // Send the message to the service
-      this.chatService.sendMessage(messageContent, userId);
-
-      // Reset the form after sending
-      this.ChatForm.reset();
-    } else {
-      console.log('Empty or invalid');
+  sendMessage(): void {
+    if (this.chatForm.invalid) {
+      alert('Message cannot be empty');
+      return;
     }
+
+    const { newMessage, userId, groupName } = this.chatForm.value;
+
+  
+      this.chatService.sendMessage(newMessage, userId);
+   
+
+    this.chatForm.reset(); // Reset the form after sending
+  }
+
+  ngOnDestroy(): void {
+    // Clean up the SignalR connection when the component is destroyed
+    this.chatService.disconnect();
   }
 }

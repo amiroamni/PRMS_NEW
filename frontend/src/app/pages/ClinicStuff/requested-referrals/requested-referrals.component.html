@@ -1,0 +1,43 @@
+<div class="container my-4">
+    <h2 class="mb-4">Requested Referrals</h2>
+  
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Patient Name</th>
+          <th>Department</th>
+          <th>Clinical Findings</th>
+          <th>Diagnosis Result</th>
+          <th>Attachment</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let referral of pendingReferrals">
+          <!-- Display Patient Name -->
+          <td>{{ referral.PatientID }}</td>
+          
+          <!-- Display Department -->
+          <td>{{ referral.department || 'N/A' }}</td>
+          
+          <!-- Display Clinical Findings -->
+          <td>{{ referral.clinicalFindings }}</td>
+          
+          <!-- Display Diagnosis Result -->
+          <td>{{ referral.diagnosisResult }}</td>
+          
+          <!-- Display Attachment link -->
+          <td>
+            <a href="#" (click)="viewAttachment(referral)" class="btn btn-info btn-sm">View Attachment</a>
+          </td>
+          
+          <!-- Actions buttons: Approve / Reject -->
+          <td>
+            <button class="btn btn-success btn-sm" (click)="approveReferral(referral)">Approve</button>
+            <button class="btn btn-danger btn-sm" (click)="rejectReferral(referral)">Reject</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

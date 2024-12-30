@@ -23,7 +23,6 @@ import lottie from 'lottie-web';
 
 // Pages Routing
 
-import { IndexComponent } from './index/index.component';
 import { HospitalsComponent } from './Admin/Register/hospitals/hospitals.component';
 import { ClinicsComponent } from './Admin/Register/clinics/clinics.component';
 import { PagesRoutingModule } from './pages-routing.module';
@@ -47,7 +46,6 @@ import { PagesRoutingModule } from './pages-routing.module';
     PagesRoutingModule,
     SlickCarouselModule,
     LightboxModule,
-    IndexComponent,
     HospitalsComponent,
     ClinicsComponent
     

@@ -18,25 +18,6 @@ export class UserserviceService {
 
   constructor(private http: HttpClient) {}
 
-  // comparePasswords(fb: FormGroup): void {
-  //   const confirmPswrdCtrl = fb.get('ConfirmPassword');
-  //   if (!confirmPswrdCtrl?.errors || 'passwordMismatch' in confirmPswrdCtrl.errors) {
-  //     confirmPswrdCtrl.setErrors(
-  //       fb.get('Password')!.value !== confirmPswrdCtrl.value ? { passwordMismatch: true } : null
-  //     );
-  //   }
-  // // }
-
-  // register(body: User) {
-  //   return this.http.post(this.BaseURI + '/ApplicationUser/Register', body)
-  //     .pipe(catchError(this.handleError));
-  // }
-
-  // login(formData: User) {
-  //   return this.http.post<any>(this.BaseURI + '/ApplicationUser/Login', formData)
-  //     .pipe(catchError(this.handleError));
-  // }
-
   getUserProfile() {
     return this.http.get(this.BaseURI + '/UserProfile')
       .pipe(catchError(this.handleError));
@@ -81,6 +62,31 @@ getUserRoles(): Array<string> {
   return [];
 }
 
+getClinicID(){
+  const token = sessionStorage.getItem('token');
+  if (token) {
+    const decodedToken = this.decodeToken(token);
+    return decodedToken.clinicID; // Assuming roles are part of token payload
+  }
+  return true
+}
+
+getHospitalID(){
+  const token = sessionStorage.getItem('token');
+  if (token) {
+    const decodedToken = this.decodeToken(token);
+    return decodedToken.hospitalID; // Assuming roles are part of token payload
+  }
+  return true
+}
+getDoctorID(){
+  const token = sessionStorage.getItem('token');
+  if (token) {
+    const decodedToken = this.decodeToken(token);
+    return decodedToken.UserID; // Assuming roles are part of token payload
+  }
+  return true
+}
 // Function to check if the user has a specific role
 hasRole(role: string): boolean {
   const roles = this.getUserRoles();

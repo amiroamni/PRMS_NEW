@@ -4,40 +4,60 @@ import * as signalR from '@microsoft/signalr';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ChatService {
-  public hubConnection: signalR.HubConnection;
+  public hubConnection!: signalR.HubConnection; // Use definite assignment
   public messages = signal<string[]>([]);
-  apiUrl: string = environment.baseUrl;
-  constructor() {
+  private readonly apiUrl: string = environment.baseUrl;
 
+  constructor() {
+    this.initializeConnection();
+    this.registerMessageHandlers();
+  }
+
+  private initializeConnection() {
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl(this.apiUrl + '/ChatHub', {
-        withCredentials: true, // Ensure credentials are sent
+      .withUrl(`${this.apiUrl}/ChatHub`, {
+        withCredentials: true,
       })
+      .withAutomaticReconnect()
       .build();
 
-    this.hubConnection.start().catch(err => console.error('SignalR error',err));
+    this.hubConnection
+      .start()
+      .then(() => console.log('SignalR connection established'))
+      .catch((err) => console.error('SignalR connection error:', err));
 
-    this.hubConnection.on('ReceiveMessage', (message: string) => {
-      console.log('Received message:', message);  // Log the received message
-      this.messages.update((currentMessages) => [...currentMessages, message]);
+    this.hubConnection.onclose(() => {
+      console.warn('SignalR connection closed. Attempting to reconnect...');
     });
   }
 
-  public sendMessage(message: string, userId?: string, groupName?: string) {
-    if (userId) {
-      console.log(userId, message,"send message func")
-      this.hubConnection.invoke('SendPrivateMessage', userId, message)
-        .catch(err => console.error(err));
-    } else if (groupName) {
-      this.hubConnection.invoke('SendGroupMessage', groupName, message)
-        .catch(err => console.error(err));
-    } else {
-      this.hubConnection.invoke('SendBroadcastMessage', message)
-        .catch(err => console.error(err));
+  private registerMessageHandlers() {
+      this.hubConnection.on('ReceivePrivateMessage', (userId: string, message: string) => {
+      console.log(`Private message from ${userId}:`, message);
+      this.messages.update((currentMessages) => [
+        ...currentMessages,
+        `Private from ${userId}: ${message}`,
+      ]);
+    });
+  }
+
+  public sendMessage(message: string, userId?: string) {
+   
+      console.log('Sending private message:', { userId, message });
+      this.hubConnection
+        .invoke('SendPrivateMessage', userId, message)
+        .catch((err) => console.error('Error sending private message:', err));
+  }
+
+  public disconnect() {
+    if (this.hubConnection) {
+      this.hubConnection
+        .stop()
+        .then(() => console.log('SignalR connection stopped'))
+        .catch((err) => console.error('Error stopping SignalR connection:', err));
     }
   }
 }
-
