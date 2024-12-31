@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Pending Referrals</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Patient Name</th>
+          <th>Clinical Findings</th>
+          <th>Diagnosis</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let referral of pendingReferrals">
+          <td>{{ referral.patientName }}</td>
+          <td>{{ referral.clinicalFindings }}</td>
+          <td>{{ referral.diagnosis }}</td>
+          <td>
+            <button class="btn btn-success" (click)="openActionModal(referral, 'accept')">Accept</button>
+            <button class="btn btn-danger" (click)="openActionModal(referral, 'decline')">Decline</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

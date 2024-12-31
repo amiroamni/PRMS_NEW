@@ -336,6 +336,8 @@ namespace PRMS_BackendAPI.Models
 
                 entity.Property(e => e.Address).HasMaxLength(120);
 
+                entity.Property(e => e.Age).HasMaxLength(50);
+
                 entity.Property(e => e.Gender).HasMaxLength(10);
 
                 entity.Property(e => e.MedicalRecordId).HasColumnName("MedicalRecord_id");
@@ -356,9 +358,9 @@ namespace PRMS_BackendAPI.Models
                     .HasMaxLength(50)
                     .HasColumnName("Patient_MiddleName");
 
-                entity.Property(e => e.PatientPhone)
+                entity.Property(e => e.PatientPhoneNumeber)
                     .HasMaxLength(20)
-                    .HasColumnName("Patient_Phone");
+                    .HasColumnName("Patient_PhoneNumeber");
             });
 
             modelBuilder.Entity<Referral>(entity =>
@@ -369,7 +371,19 @@ namespace PRMS_BackendAPI.Models
 
                 entity.Property(e => e.AppointmentId).HasColumnName("Appointment_id");
 
+                entity.Property(e => e.Attachment).HasMaxLength(100);
+
+                entity.Property(e => e.ClinicFindings)
+                    .HasMaxLength(250)
+                    .HasColumnName("Clinic_Findings");
+
+                entity.Property(e => e.ClinicId).HasColumnName("Clinic_Id");
+
                 entity.Property(e => e.DateOfReferral).HasColumnType("datetime");
+
+                entity.Property(e => e.Department).HasMaxLength(50);
+
+                entity.Property(e => e.DiagnosisResult).HasMaxLength(150);
 
                 entity.Property(e => e.DoctorId).HasColumnName("Doctor_Id");
 
@@ -377,9 +391,17 @@ namespace PRMS_BackendAPI.Models
 
                 entity.Property(e => e.PatientId).HasColumnName("Patient_Id");
 
+                entity.Property(e => e.ReasonsForReferrals).HasMaxLength(100);
+
                 entity.Property(e => e.ReferralDescription)
                     .HasMaxLength(150)
                     .HasColumnName("Referral_description");
+
+                entity.Property(e => e.RxGiven)
+                    .HasMaxLength(50)
+                    .HasColumnName("rxGiven");
+
+                entity.Property(e => e.Status).HasMaxLength(50);
 
                 entity.HasOne(d => d.Appointment)
                     .WithMany(p => p.Referrals)

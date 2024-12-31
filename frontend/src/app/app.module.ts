@@ -90,7 +90,8 @@ if (environment.defaultauth === 'firebase') {
       ApikeyEffects
     ]),
     PagesModule,
-    NgPipesModule
+    NgPipesModule,
+    StoreModule.forRoot({}, {})
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

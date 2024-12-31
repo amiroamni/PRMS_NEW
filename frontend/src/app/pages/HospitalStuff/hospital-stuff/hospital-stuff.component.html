@@ -1,1 +1,28 @@
-<p>hospital-stuff works!</p>
+<div class="modal-header">
+    <h5 class="modal-title">
+      {{ action === 'accept' ? 'Accept Referral' : 'Decline Referral' }}
+    </h5>
+  </div>
+  <div class="modal-body">
+    <p>
+      <strong>Patient Name:</strong> {{ referral?.patientName }}
+    </p>
+    <p>
+      <strong>Clinical Findings:</strong> {{ referral?.clinicalFindings }}
+    </p>
+    <p>
+      <strong>Diagnosis:</strong> {{ referral?.diagnosis }}
+    </p>
+  
+    <div *ngIf="action === 'decline'">
+      <label for="reason">Reason for Declining:</label>
+      <textarea id="reason" [(ngModel)]="reason" class="form-control"></textarea>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-secondary" (click)="actionCompleted.emit()">Cancel</button>
+    <button class="btn btn-primary" (click)="submitAction()">
+      Submit
+    </button>
+  </div>
+  
