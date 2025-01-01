@@ -18,24 +18,24 @@ export class HospitalStuffComponent {
 
   constructor(private hospitalService: HospitalStuffService) {}
 
-  submitAction(): void {
-    if (this.action === 'decline' && !this.reason.trim()) {
-      alert('Reason for declining is required');
-      return;
-    }
+  // submitAction(): void {
+  //   if (this.action === 'decline' && !this.reason.trim()) {
+  //     alert('Reason for declining is required');
+  //     return;
+  //   }
 
-    const data = {
-      referralID: this.referral?.id,
-      action: this.action,
-      reason: this.action === 'decline' ? this.reason : undefined,
-    };
+  //   const data = {
+  //     referralID: this.referral?.id,
+  //     action: this.action,
+  //     reason: this.action === 'decline' ? this.reason : undefined,
+  //   };
 
-    this.hospitalService.updateReferral(data).subscribe({
-      next: () => {
-        alert(`${this.action === 'accept' ? 'Accepted' : 'Declined'} successfully`);
-        this.actionCompleted.emit();
-      },
-      error: (err:any) => console.error('Error updating referral:', err),
-    });
-  }
+  //   this.hospitalService.updateReferral(data).subscribe({
+  //     next: () => {
+  //       alert(`${this.action === 'accept' ? 'Accepted' : 'Declined'} successfully`);
+  //       this.actionCompleted.emit();
+  //     },
+  //     error: (err:any) => console.error('Error updating referral:', err),
+  //   });
+  // }
 }
