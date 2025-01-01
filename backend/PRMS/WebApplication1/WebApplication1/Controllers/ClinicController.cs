@@ -146,63 +146,65 @@ namespace WebApplication1.Controllers
         }
 
 
-
-private async Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
-    {
-        // Fetch the user's role directly from AspNetUsers
-        var userRole = await _identityDbContext.Users
-            .Where(u => u.Id == user.Id)
-            .Select(u => u.Role)
-            .FirstOrDefaultAsync();
-
-        if (string.IsNullOrEmpty(userRole))
+        private async Task<JwtSecurityToken> GenerateToken(ApplicationUser user, Clinic clinic, string createdBy)
         {
-            throw new Exception("Role not found for the specified user.");
-        }
+            // Fetch the user's role directly from AspNetUsers
+            var userRole = await _identityDbContext.Users
+                .Where(u => u.Id == user.Id)
+                .Select(u => u.Role)
+                .FirstOrDefaultAsync();
 
-        // Fetch the role ID from AspNetRoles based on role name
-        var roleId = await _identityDbContext.Roles
-            .Where(r => r.NormalizedName == userRole.ToUpper())
-            .Select(r => r.Id)
-            .FirstOrDefaultAsync();
+            if (string.IsNullOrEmpty(userRole))
+            {
+                throw new Exception("Role not found for the specified user.");
+            }
 
-        // Fetch associated claims from AspNetRoleClaims for the user's role
-        var roleClaimsFromDb = await _identityDbContext.RoleClaims
-            .Where(rc => rc.RoleId == roleId)
-            .Select(rc => new Claim(rc.ClaimType, rc.ClaimValue))
-            .ToListAsync();
+            // Fetch the role ID from AspNetRoles based on role name
+            var roleId = await _identityDbContext.Roles
+                .Where(r => r.NormalizedName == userRole.ToUpper())
+                .Select(r => r.Id)
+                .FirstOrDefaultAsync();
 
-        // Basic user claims
-        var claims = new List<Claim>
+            // Fetch associated claims from AspNetRoleClaims for the user's role
+            var roleClaimsFromDb = await _identityDbContext.RoleClaims
+                .Where(rc => rc.RoleId == roleId)
+                .Select(rc => new Claim(rc.ClaimType, rc.ClaimValue))
+                .ToListAsync();
+
+            // Basic user claims
+            var claims = new List<Claim>
     {
         new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
         new Claim(JwtRegisteredClaimNames.Email, user.Email),
         new Claim("uid", user.Id),
-        new Claim("Role", userRole) // Adding role name directly
+        new Claim("Role", userRole),
+        new Claim("ClinicId", clinic.ClinicId.ToString()),
+        new Claim("ClinicName", clinic.ClinicName),
+        new Claim("ModifiedDate", DateTime.UtcNow.ToString("o")), // ISO 8601 format
+        new Claim("UserName", user.UserName),
+        new Claim("CreatedBy", createdBy)
     };
 
-        // Add the user's role claims to the token claims
-        claims.AddRange(roleClaimsFromDb);
+            // Add the user's role claims to the token claims
+            claims.AddRange(roleClaimsFromDb);
 
-        // Retrieve any additional claims for the user
-        var userClaims = await _userManager.GetClaimsAsync(user);
-        claims.AddRange(userClaims);
+            // Retrieve any additional claims for the user
+            var userClaims = await _userManager.GetClaimsAsync(user);
+            claims.AddRange(userClaims);
 
-        var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
-        var signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
+            var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
+            var signingCredentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256);
 
-        var jwtSecurityToken = new JwtSecurityToken(
-            issuer: _jwtSettings.Issuer,
-            audience: _jwtSettings.Audience,
-            claims: claims,
-            expires: DateTime.UtcNow.AddMinutes(_jwtSettings.DurationInMinutees),
-            signingCredentials: signingCredentials);
+            var jwtSecurityToken = new JwtSecurityToken(
+                issuer: _jwtSettings.Issuer,
+                audience: _jwtSettings.Audience,
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(_jwtSettings.DurationInMinutees),
+                signingCredentials: signingCredentials);
 
-        return jwtSecurityToken;
-    }
-
-
+            return jwtSecurityToken;
+        }
 
 
 
@@ -223,7 +225,9 @@ private async Task<JwtSecurityToken> GenerateToken(ApplicationUser user)
 
 
 
-    [HttpPut("{id}")]
+
+
+        [HttpPut("{id}")]
         public async Task<IActionResult> PutClincs(int id, ClinicDTO clinicDTO)
         {
             if (_dbContext.Clinics == null)

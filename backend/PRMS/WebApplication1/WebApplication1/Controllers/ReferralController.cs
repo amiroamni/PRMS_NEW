@@ -35,6 +35,27 @@ namespace WebApplication1.Controllers
             return Ok(referralDTO);
         }
 
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ReferralDTO>> GETReferral(int id)
+        {
+            if (_dbContext.Referrals == null)
+            {
+                return NotFound();
+            }
+
+            var referral = await _dbContext.Referrals.FindAsync(id);
+            if (referral == null)
+            {
+                return NotFound();
+            }
+
+            var referralDTO = _mapper.Map<ReferralDTO>(referral);
+            return Ok(referralDTO);
+        }
+
+
+
         [HttpPost]
         public async Task<ActionResult<ReferralDTO>> PostReferral(ReferralDTO referralDTO)
         {
